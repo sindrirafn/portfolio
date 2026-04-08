@@ -1,0 +1,537 @@
+/* CV Panel - Main container */
+.panel {
+  margin-top: var(--space-5);
+}
+
+.inner {
+  padding: 0;
+}
+
+/* CV Layout - Main container for sidebar and content */
+.cvLayout {
+  display: flex;
+  min-height: 500px;
+  gap: var(--space-6);
+}
+
+/* Vertical Tabs Sidebar */
+.tabsSidebar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.verticalTab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.verticalTab:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.verticalTabActive {
+  background: var(--surface-3);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.verticalTabLabel {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Content Area */
+.tabContent {
+  flex: 1;
+  min-height: 400px;
+}
+
+/* Profile Styles */
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.profileName {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+}
+
+.contactLabel {
+  font-size: 1.1rem;
+}
+
+.profileSummary h4 {
+  margin: 0 0 var(--space-3);
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.summaryParagraph {
+  margin: 0 0 var(--space-3);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Experience Styles */
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.experienceItem {
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.experienceItem:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.experienceHeader {
+  margin-bottom: var(--space-3);
+}
+
+.experienceTitle {
+  margin: 0 0 var(--space-2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.experienceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.company {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.location {
+  color: var(--text-muted);
+}
+
+.period {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.achievementsList {
+  margin: 0;
+  padding-left: var(--space-4);
+  list-style: none;
+}
+
+.achievement {
+  position: relative;
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-2);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.achievement::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Education Styles */
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.educationItem {
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.educationItem:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.educationHeader {
+  margin-bottom: var(--space-3);
+}
+
+.educationDegree {
+  margin: 0 0 var(--space-2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.educationMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.school {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Projects Styles */
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.projectItem {
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.projectItem:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+  gap: var(--space-3);
+}
+
+.projectTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.projectImageWrapper {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface-3);
+  margin-bottom: var(--space-4);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.githubLink {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.githubLink:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.projectBullets {
+  margin: 0;
+  padding-left: var(--space-4);
+  list-style: none;
+}
+
+.projectBullet {
+  position: relative;
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-2);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.projectBullet::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Skills Styles */
+.skillsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.skillSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.skillSectionTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.skillLevel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.skillBar {
+  height: 6px;
+  background: var(--surface-3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  border-radius: 3px;
+  transition: width var(--transition-medium);
+}
+
+.interestsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.interestTag {
+  background: var(--badge-neutral-bg);
+  color: var(--badge-neutral-text);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* References Styles */
+.referencesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.referenceCard {
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.referenceCard:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.referenceHeader {
+  margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.referenceName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.referenceRole {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--badge-sage-bg);
+  color: var(--badge-sage-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.referenceDetails {
+  margin-bottom: var(--space-4);
+}
+
+.referenceCompany {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.referenceContact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .inner {
+    padding: var(--space-4);
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .tabsSidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .verticalTab {
+    flex: 0 0 auto;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+    padding: var(--space-3);
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .verticalTab:last-child {
+    border-right: none;
+  }
+
+  .verticalTabActive {
+    border-right-color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .verticalTabActive::before {
+    display: none;
+  }
+
+  .tabContent {
+    padding: var(--space-4);
+  }
+
+  .profileHeader {
+    text-align: center;
+  }
+
+  .contactInfo {
+    justify-content: center;
+  }
+
+  .referencesList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: var(--space-3);
+  }
+
+  .verticalTab {
+    min-width: 100px;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .verticalTabLabel {
+    font-size: 0.8rem;
+  }
+
+  .experienceItem,
+  .educationItem,
+  .projectItem,
+  .referenceCard {
+    padding: var(--space-3);
+  }
+
+  .experienceTitle,
+  .educationDegree,
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+}

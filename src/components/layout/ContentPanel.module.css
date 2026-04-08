@@ -1,0 +1,34 @@
+/* Shared Content Panel */
+.contentPanel {
+  margin: var(--space-5) auto;
+  max-width: 1200px;
+  padding: 0 var(--space-4);
+}
+
+.inner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: var(--space-8);
+  transition: all var(--transition-fast);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contentPanel {
+    padding: 0 var(--space-3);
+  }
+
+  .inner {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: var(--space-4);
+  }
+}

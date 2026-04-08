@@ -6,7 +6,8 @@ export const skills = {
     "javascript",
     "sql",
     "html",
-    "css"
+    "css",
+    "cpp"
   ],
   tools: [
     "react",
@@ -28,7 +29,7 @@ export const skills = {
     "database_design",
     "database_integration",
     "system_design",
-    "state_management",
+    // "state_management",
     "testing",
     "debugging",
     "version_control"

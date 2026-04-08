@@ -205,12 +205,13 @@ export const contentEn = {
     title: "Skills",
     subtitle: "Technical expertise and professional strengths",
     sections: {
-      core: "Core Technologies",
-      tools: "Frameworks and Tools",
+      core: "Programming Languages",
+      tools: "Tools and Environments",
       concepts: "Development Concepts",
       professional: "Professional Strengths"
     },
     items: {
+      cpp: "C++",
       csharp: "C#",
       dotnet: ".NET",
       python: "Python",
@@ -279,7 +280,7 @@ export const contentEn = {
         highlights: [
           "Designed a unified tab-based portfolio experience with shared layout patterns.",
           "Implemented bilingual content and dark/light theme support.",
-          "Emphasized polished typography, spacing, and reusable design tokens."
+          "Emphasized polished design and user experience."
         ],
         imageAlt: "Portfolio website project preview"
       }

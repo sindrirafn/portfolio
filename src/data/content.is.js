@@ -206,12 +206,13 @@ export const contentIs = {
     title: "Hæfni",
     subtitle: "Tæknileg sérþekking og fagleg styrkur",
     sections: {
-      core: "Kjarntækni",
-      tools: "Rammar og Verkefni",
+      core: "Forritunarmál",
+      tools: "Tól og umhverfi",
       concepts: "Þróunarhugtök",
-      professional: "Fagleg styrkur"
+      professional: "Styrkleikar"
     },
     items: {
+      cpp: "C++",
       csharp: "C#",
       dotnet: ".NET",
       python: "Python",
@@ -275,12 +276,12 @@ export const contentIs = {
         imageAlt: "Skjáskot af TaskList verkefni"
       },
       portfolio: {
-        title: "Vefsíða ferilskrár",
+        title: "Kynningarvefsíða",
         summary: "Persónuleg portfolio vefsíða sem sýnir reynslu, verkefni og tæknilega styrkleika í rólegri, nútímalegri framsetningu með tvítyngdum stuðningi.",
         highlights: [
-          "Hannaði samræmt portfolio með sameiginlegri uppsetningu milli flipa.",
-          "Innleiddi tvítyngdan stuðning og dökkt/létt þema.",
-          "Lagði áherslu á fágað letur, bil og endurnýtanleg hönnunartákn."
+          "Hannaði samræmda vefsíðu með sameiginlegri uppsetningu milli flipa.",
+          "Innleiddi tvítyngdan stuðning og dökkt/ljóst þema.",
+          "Lagði áherslu á fágaða hönnun og notendaupplifun."
         ],
         imageAlt: "Skjáskot af portfolio vefsíðu"
       }

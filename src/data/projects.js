@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     id: "portfolio",
-    image: "/projects/portfolio-preview.svg",
+    image: "",
     skills: ["react", "javascript", "html", "css", "system_design"],
     githubUrl: "",
     liveUrl: "",

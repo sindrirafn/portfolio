@@ -20,14 +20,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  padding: var(--space-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
 }
 
 .verticalTab {
   appearance: none;
-  border: none;
+  border: 1px solid transparent;
   background: transparent;
   color: var(--text-muted);
   padding: var(--space-3) var(--space-4);
+  min-height: 2.75rem;
   text-align: left;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -36,14 +41,25 @@
 }
 
 .verticalTab:hover {
-  background: var(--surface-2);
+  background: var(--surface-card-hover);
+  border-color: var(--border-subtle);
   color: var(--text);
 }
 
 .verticalTabActive {
-  background: var(--surface-3);
+  background: var(--surface-card);
   color: var(--text);
   font-weight: 600;
+  border-color: var(--accent-border);
+  box-shadow: inset 3px 0 0 var(--accent), inset 0 0 0 1px var(--accent-border);
+}
+
+.verticalTab:focus-visible {
+  outline: none;
+  color: var(--text);
+  background: var(--surface-card);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .verticalTabLabel {
@@ -115,13 +131,14 @@
 
 .experienceItem {
   padding: var(--space-4);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .experienceItem:hover {
+  background: var(--surface-card-hover);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-sm);
 }
@@ -189,13 +206,14 @@
 
 .educationItem {
   padding: var(--space-4);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .educationItem:hover {
+  background: var(--surface-card-hover);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-sm);
 }
@@ -232,13 +250,14 @@
 
 .projectItem {
   padding: var(--space-4);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .projectItem:hover {
+  background: var(--surface-card-hover);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-sm);
 }
@@ -263,7 +282,7 @@
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--surface-3);
+  background: var(--surface-card-hover);
   margin-bottom: var(--space-4);
 }
 
@@ -474,6 +493,7 @@
     border-bottom: none;
     border-right: 1px solid var(--border);
     padding: var(--space-3);
+    min-height: 2.75rem;
     min-width: 120px;
     text-align: center;
   }
@@ -505,6 +525,17 @@
 
   .referencesList {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verticalTab,
+  .experienceItem,
+  .educationItem,
+  .projectItem,
+  .skillProgress,
+  .referenceCard {
+    transition: none;
   }
 }
 

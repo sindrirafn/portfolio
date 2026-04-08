@@ -13,6 +13,8 @@ export const skills = {
     "django",
     "node",
     "flutter",
+    "sharepoint",
+    "powershell",
     "git",
     "linux",
     "bash",

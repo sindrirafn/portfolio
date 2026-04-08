@@ -17,8 +17,9 @@
 
 .logo h1 {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.32rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 
 .controls {
@@ -27,24 +28,99 @@
   align-items: center;
 }
 
-.themeToggle,
-.languageToggle button {
-  background-color: var(--accent-soft);
-  color: white;
-  border: 1px solid var(--accent-soft);
+.themeToggle {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
   padding: var(--space-2) var(--space-3);
   cursor: pointer;
   border-radius: var(--radius-sm);
   font-size: 0.9rem;
   font-weight: 500;
   transition: all var(--transition-fast);
-  min-width: 3rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   text-align: center;
 }
 
-.themeToggle:hover,
-.languageToggle button:hover {
-  background-color: var(--accent);
+.themeToggle:hover {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.themeToggle:focus-visible {
+  outline: none;
+  color: var(--text);
+  background: var(--surface-2);
   border-color: var(--accent);
-  color: var(--accent-strong);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.languageToggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  gap: 0.05rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-solid);
+}
+
+.languageButton {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  min-height: 2.25rem;
+  transition: all var(--transition-fast);
+}
+
+.languageButton:hover {
+  color: var(--text);
+  background: var(--tab-hover);
+}
+
+.languageButton:focus-visible {
+  outline: none;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.languageButtonActive {
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: var(--space-3) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-3);
+  }
+
+  .logo h1 {
+    font-size: 1.08rem;
+  }
+
+  .controls {
+    gap: var(--space-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themeToggle,
+  .languageButton {
+    transition: none;
+  }
 }

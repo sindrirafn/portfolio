@@ -6,23 +6,52 @@ export const contentEn = {
     contactMe: "Contact Me"
   },
   navbar: {
-    logo: "Logo"
+    logo: "Sindri Rafn",
+    tabsAriaLabel: "Primary content tabs",
+    tabs: {
+      about: "About",
+      cv: "CV",
+      skills: "Skills",
+      projects: "Projects"
+    },
+    controls: {
+      languageToggleAria: "Language selector",
+      themeToggleAria: "Toggle color theme"
+    }
   },
   IntroPanel: {
     name: "Sindri Rafn Guðmundsson",
     title: "Software Specialist / Developer",
-    intro: "I build practical, user-focused technical solutions with a strong foundation in support, systems, and software development.",
-    imageSrc: "src/assets/images/mynd.JPG",
+    intro: "I build practical, user-focused solutions with a background in support, systems, and software development.",
+    imageSrc: "",
     imageAlt: "Portrait of Sindri Rafn Guðmundsson",
     badges: ["React", ".NET", "SQL", "Power BI"]
   },
   About: {
     heading: "About me",
-    lead: "I enjoy building practical digital solutions and improving systems in ways that make everyday work smoother, clearer, and more effective.",
-    body: [],
+    introParagraphs: [
+      "I am a software specialist with a background in computer science and biomedical engineering.",
+      "I have worked on setup, maintenance, and development of solutions, and I care about building simple, well-designed software that is genuinely useful in real projects.",
+      "I focus on clear structure, good user experience, and solutions that are practical in day-to-day work."
+    ],
+    intro: "I am a software specialist with a background in computer science and biomedical engineering.",
+    focusLabel: "Focus",
+    focus: "Building practical software and systems work across modern development and Microsoft-based environments.",
+    currentlyLabel: "Currently",
+    currently: "I am currently building this portfolio, developing projects, and looking for opportunities in software development or engineering.",
+    linksLabel: "Links",
+    contactLabel: "Contact",
+    contactText: "Feel free to reach out if you want to talk about work opportunities, projects, or collaboration.",
+    githubLabel: "GitHub",
+    githubValue: "github.com/sindrirafn",
     githubUrl: "https://github.com/sindrirafn",
     linkedInUrl: "",
-    email: "your@email.com"
+    emailLabel: "Email",
+    email: "sindrig94@gmail.com",
+    phoneLabel: "Phone",
+    phone: "846-0717",
+    locationLabel: "Location",
+    location: "Hveragerdi"
   },
   CV: {
     title: "Curriculum Vitae",
@@ -34,6 +63,10 @@ export const contentEn = {
       projects: "Projects",
       other: "Other",
       references: "References"
+    },
+    otherSections: {
+      languages: "Languages",
+      interests: "Interests"
     },
     profile: {
       name: "Sindri Rafn Guðmundsson",
@@ -146,8 +179,8 @@ export const contentEn = {
     ],
     interests: [
       "Fitness",
-      "Camping",
-      "Family gatherings"
+      "Cooking",
+      "Family time"
     ],
     references: [
       {
@@ -189,6 +222,8 @@ export const contentEn = {
       django: "Django",
       node: "Node.js",
       flutter: "Flutter",
+      sharepoint: "SharePoint",
+      powershell: "PowerShell",
       git: "Git",
       linux: "Linux",
       bash: "Bash",
@@ -211,6 +246,43 @@ export const contentEn = {
       adaptability: "Adaptability",
       fast_learner: "Fast Learning",
       problem_solving: "Problem Solving"
+    }
+  },
+  projectsPage: {
+    navAriaLabel: "Project navigation",
+    labels: {
+      skills: "Skills & Technologies",
+      links: "Project Links",
+      github: "GitHub Repository",
+      live: "Live Site",
+      tryItOut: "Try It Out",
+      imageFallback: "Preview coming soon"
+    },
+    statuses: {
+      completed: "Completed",
+      active: "In progress"
+    },
+    items: {
+      tasklist: {
+        title: "TaskList",
+        summary: "A full-stack task management application focused on practical workflows, clear task visibility, and a clean day-to-day user experience.",
+        highlights: [
+          "Built a full-stack task workflow with a React frontend and .NET backend.",
+          "Focused on clarity and fast interactions for daily task management.",
+          "Connected core features through a clean API-driven architecture."
+        ],
+        imageAlt: "TaskList project preview"
+      },
+      portfolio: {
+        title: "Portfolio Website",
+        summary: "A personal portfolio built to present experience, projects, and technical strengths through a calm, modern interface with bilingual support.",
+        highlights: [
+          "Designed a unified tab-based portfolio experience with shared layout patterns.",
+          "Implemented bilingual content and dark/light theme support.",
+          "Emphasized polished typography, spacing, and reusable design tokens."
+        ],
+        imageAlt: "Portfolio website project preview"
+      }
     }
   }
   // Add more sections as needed

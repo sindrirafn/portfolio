@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TabBar from "./components/layout/TabBar/TabBar";
 import Navbar from './components/layout/navbar';
-// import Footer from './components/layout/Footer';
-import Hero from './components/sections/Hero';
 import About from './components/sections/About';
-// import Projects from './components/sections/Projects';
+import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
-// import Contact from './components/sections/Contact';
 import IntroPanel from './components/layout/IntroPanel';
 import { LanguageProvider } from './components/LanguageContext';
 import { ThemeProvider } from './components/ThemeContext';
@@ -14,11 +11,10 @@ import CV from './components/sections/CV';
 import ContentPanel from './components/layout/ContentPanel';
 
 const tabs = [
-  { id: "about", label: "About" },
+  { id: "about" },
   { id: "cv", label: "CV" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "skills" },
+  { id: "projects" },
 ];
 
 function App() {
@@ -29,8 +25,6 @@ function App() {
       <LanguageProvider>
         <Navbar />
         <div className="appShell themeTransition">
-          {/* <Hero /> */}
-          {/* <div style={{ height: "2rem" }} /> */}
           <IntroPanel />
 
           <TabBar activeTab={activeTab} onTabChange={setActiveTab} tabs={tabs} />
@@ -45,6 +39,9 @@ function App() {
             {activeTab === "skills" && (
               <Skills />
             )}
+            {activeTab === "projects" && (
+              <Projects />
+            )}
           </ContentPanel>
         </div>
       </LanguageProvider>
@@ -53,16 +50,3 @@ function App() {
 }
 
 export default App;
-
-//         {activeTab === "cv" && <div>CV content</div>}
-//         {activeTab === "skills" && <div>Skills content</div>}
-//         {activeTab === "projects" && <div>Projects content</div>}
-//         {activeTab === "contact" && <div>Contact content</div>}
-//       </LanguageProvider>
-//     </div>
-
-//   );
-// }
-
-
-// export default App;

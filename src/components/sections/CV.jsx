@@ -8,7 +8,7 @@ const cvTabs = [
   { id: 'education', labelKey: 'tabs.education' },
   { id: 'projects', labelKey: 'tabs.projects' },
   { id: 'other', labelKey: 'tabs.other' },
-  { id: 'references', labelKey: 'tabs.references' },
+//   { id: 'references', labelKey: 'tabs.references' },
 ];
 
 function CV() {
@@ -27,8 +27,8 @@ function CV() {
         return <ProjectsTab data={content.CV.projects} />;
       case 'other':
         return <OtherTab data={content.CV} />;
-      case 'references':
-        return <ReferencesTab data={content.CV.references} />;
+      // case 'references':
+      //   return <ReferencesTab data={content.CV.references} />;
       default:
         return <ProfileTab data={content.CV.profile} />;
     }
@@ -76,7 +76,7 @@ function ProfileTab({ data }) {
     <div className={styles.profileContent}>
       <div className={styles.profileHeader}>
         <h3 className={styles.profileName}>{data.name}</h3>
-        <div className={styles.contactInfo}>
+        {/* <div className={styles.contactInfo}>
           <div className={styles.contactItem}>
             <span className={styles.contactLabel}>📞</span>
             <span>{data.phone}</span>
@@ -89,11 +89,11 @@ function ProfileTab({ data }) {
             <span className={styles.contactLabel}>📍</span>
             <span>{data.location}</span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.profileSummary}>
-        <h4>Professional Summary</h4>
+        {/* <h4>Professional Summary</h4> */}
         {data.summary?.map((paragraph, index) => (
           <p key={index} className={styles.summaryParagraph}>
             {paragraph}
@@ -188,11 +188,13 @@ function ProjectsTab({ data }) {
 function OtherTab({ data }) {
   if (!data) return null;
 
+  const sectionLabels = data.otherSections || {};
+
   return (
     <div className={styles.skillsContent}>
       {/* Languages */}
       <div className={styles.skillSection}>
-        <h3 className={styles.skillSectionTitle}>Languages</h3>
+        <h3 className={styles.skillSectionTitle}>{sectionLabels.languages || 'Languages'}</h3>
         <div className={styles.skillList}>
           {data.languages?.map((lang) => (
             <div key={lang.id} className={styles.skillItem}>
@@ -214,7 +216,7 @@ function OtherTab({ data }) {
       {/* Interests */}
       {data.interests && data.interests.length > 0 && (
         <div className={styles.skillSection}>
-          <h3 className={styles.skillSectionTitle}>Interests</h3>
+          <h3 className={styles.skillSectionTitle}>{sectionLabels.interests || 'Interests'}</h3>
           <div className={styles.interestsList}>
             {data.interests.map((interest, index) => (
               <span key={index} className={styles.interestTag}>

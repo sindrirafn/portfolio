@@ -1,5 +1,3 @@
-import { skills } from "./skills";
-
 export const contentIs = {
   hero: {
     title: "Sindri Rafn Guðmundsson",
@@ -8,34 +6,68 @@ export const contentIs = {
     contactMe: "Hafa Samband"
   },
   navbar: {
-    logo: "Merki"
+    logo: "Sindri Rafn",
+    tabsAriaLabel: "Aðal flipaleiðsögn",
+    tabs: {
+      about: "Um mig",
+      cv: "CV",
+      skills: "Hæfni",
+      projects: "Verkefni"
+    },
+    controls: {
+      languageToggleAria: "Tungumálaval",
+      themeToggleAria: "Skipta um litastillingu"
+    }
   },
   IntroPanel: {
     name: "Sindri Rafn Guðmundsson",
     title: "Hugbúnaðarsérfræðingur / Forritari",
-    intro: "Ég byggi upp praktískar, notendamiðaðar tæknilausnir með sterku grunn í stuðningi, kerfum og hugbúnaðarþróun.",
-    imageSrc: "/src/assets/images/mynd.JPG",
+    intro: "Ég byggi upp praktískar, notendamiðaðar lausnir með bakgrunn í stuðningi, kerfum og hugbúnaðarþróun.",
+    imageSrc: "",
     imageAlt: "Mynd af Sindri Rafn Guðmundsson",
     badges: ["React", ".NET", "SQL", "Power BI"]
   },
   About: {
     heading: "Um mig",
-    lead: "Ég njóti þess að byggja upp praktískar stafrænar lausnir og bæta kerfi á þann hátt að gera daglegt starf sléttara, skýrara og skilvirkara.",
-    body: [],
+    introLabel: "Um mig",
+    introParagraphs: [
+      "Ég er hugbúnaðarsérfræðingur með bakgrunn í tölvunarfræði og heilbrigðisverkfræði.",
+      "Ég hef unnið við uppsetningu, viðhald og þróun lausna og hef mikinn áhuga á að byggja einfaldan og vel hannaðan hugbúnað sem nýtist í raunverulegum verkefnum.",
+      "Ég legg áherslu á skýra uppbyggingu, góða notendaupplifun og lausnir sem eru raunhæfar í daglegu starfi."
+    ],
+    intro: "Ég er hugbúnaðarsérfræðingur með bakgrunn í tölvunarfræði og heilbrigðisverkfræði.",
+    focusLabel: "Áherslur",
+    focus: "Byggja upp praktískar lausnir og kerfisnálgun í nútíma þróunarumhverfi og Microsoft-tengdri tækni.",
+    currentlyLabel: "Núna",
+    currently: "Ég er að byggja upp þessa vefsíðu, þróa verkefni og leita að tækifærum í hugbúnaðarþróun eða verkfræði.",
+    linksLabel: "Tenglar",
+    contactLabel: "Hafa samband",
+    contactText: "Endilega hafðu samband ef þú vilt ræða starf, verkefni eða samstarf.",
+    githubLabel: "GitHub",
+    githubValue: "github.com/sindrirafn",
     githubUrl: "https://github.com/sindrirafn",
     linkedInUrl: "",
-    email: "your@email.com"
+    emailLabel: "Tölvupóstur",
+    email: "sindrig94@gmail.com",
+    phoneLabel: "Sími",
+    phone: "846-0717",
+    locationLabel: "Staðsetning",
+    location: "Hveragerði"
   },
   CV: {
     title: "Ferilskrá",
     subtitle: "Faglegur bakgrunnur og hæfni",
     tabs: {
-      profile: "Snið",
-      experience: "Reynsla",
+      profile: "Yfirlit",
+      experience: "Starfsreynsla",
       education: "Menntun",
       projects: "Verkefni",
       other: "Annað",
-      references: "Tilvísanir"
+      references: "Meðmælendur"
+    },
+    otherSections: {
+      languages: "Tungumál",
+      interests: "Áhugamál"
     },
     profile: {
       name: "Sindri Rafn Guðmundsson",
@@ -191,6 +223,8 @@ export const contentIs = {
       django: "Django",
       node: "Node.js",
       flutter: "Flutter",
+      sharepoint: "SharePoint",
+      powershell: "PowerShell",
       git: "Git",
       linux: "Linux",
       bash: "Bash",
@@ -199,10 +233,10 @@ export const contentIs = {
       backend: "Bakendaþróun",
       fullstack: "Full-stack þróun",
       api_development: "API þróun",
-      database_design: "Gagnagrunns hönnun",
-      database_integration: "Gagnagrunns samþætting",
+      database_design: "Hönnun gagnagrunna",
+      database_integration: "Samþætting gagnagrunna",
       system_design: "Kerfishönnun",
-      state_management: "Staða stjórnun",
+      state_management: "Stjórnun ástands",
       testing: "Prófun",
       debugging: "Villuleit",
       version_control: "Útgáfustýring",
@@ -211,8 +245,45 @@ export const contentIs = {
       initiative: "Frumkvæði",
       attention_to_detail: "Nákvæmni",
       adaptability: "Aðlögunarhæfni",
-      fast_learner: "Hröð nám",
-      problem_solving: "Vandamála lausnir"
+      fast_learner: "Fljótur að læra",
+      problem_solving: "Lausnamiðaður hugsunarháttur"
+    }
+  },
+  projectsPage: {
+    navAriaLabel: "Leiðsögn verkefna",
+    labels: {
+      skills: "Hæfni og tækni",
+      links: "Tenglar",
+      github: "GitHub svæði",
+      live: "Vefsvæði",
+      tryItOut: "Prófa",
+      imageFallback: "Forskoðun kemur fljótlega"
+    },
+    statuses: {
+      completed: "Lokið",
+      active: "Í vinnslu"
+    },
+    items: {
+      tasklist: {
+        title: "TaskList",
+        summary: "Full-stack verkefnalistaforrit sem leggur áherslu á praktískt vinnuflæði, skýrt stöðuyfirlit og hreina notendaupplifun í daglegri notkun.",
+        highlights: [
+          "Byggði full-stack verkefnalausn með React framenda og .NET bakenda.",
+          "Lagði áherslu á skýra framsetningu og hraða virkni fyrir daglega notkun.",
+          "Tengdi kjarnavirkni í gegnum vel uppbyggt API-flæði."
+        ],
+        imageAlt: "Skjáskot af TaskList verkefni"
+      },
+      portfolio: {
+        title: "Vefsíða ferilskrár",
+        summary: "Persónuleg portfolio vefsíða sem sýnir reynslu, verkefni og tæknilega styrkleika í rólegri, nútímalegri framsetningu með tvítyngdum stuðningi.",
+        highlights: [
+          "Hannaði samræmt portfolio með sameiginlegri uppsetningu milli flipa.",
+          "Innleiddi tvítyngdan stuðning og dökkt/létt þema.",
+          "Lagði áherslu á fágað letur, bil og endurnýtanleg hönnunartákn."
+        ],
+        imageAlt: "Skjáskot af portfolio vefsíðu"
+      }
     }
   }
   // Add more sections as needed

@@ -27,6 +27,7 @@
   justify-content: space-between;
   transition: all var(--transition-fast);
   text-align: left;
+  color: var(--text-muted);
 }
 
 .sectionHeader:hover .chevron {

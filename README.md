@@ -47,8 +47,8 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/sindrirafn/my-website.git
-cd my-website
+git clone https://github.com/sindrirafn/portfolio.git
+cd portfolio
 ```
 ---
 ### 2. Install dependancies
@@ -104,7 +104,12 @@ This project was built to:
 
 🔗 Live Version
 
-...
+Live demo (temporary link) at:
+
+```code
+https://my-website-ch1.pages.dev
+```
+
 
 ---
 

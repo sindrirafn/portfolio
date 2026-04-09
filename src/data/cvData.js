@@ -118,24 +118,6 @@ export const interests = [
   "Samverustundir með fjölskyldu"
 ];
 
-export const references = [
-  {
-    id: "thor-haraldsson",
-    name: "Þór Haraldsson",
-    role: "Framkvæmdastjóri",
-    company: "Spektra",
-    phone: "840-4640",
-    email: "thor@spektra.is"
-  },
-  {
-    id: "stefania-smaradottir",
-    name: "Stefanía Smáradóttir",
-    role: "Forstöðukona",
-    company: "Íbúðarkjarninn Jöklaseli",
-    phone: "693-9281",
-    email: "stefania.smaradottir@reykjavik.is"
-  }
-];
 
 export const cvData = {
   profile,
@@ -143,8 +125,7 @@ export const cvData = {
   education,
   projects,
   languages,
-  interests,
-  references
+  interests
 };
 
 export default cvData;

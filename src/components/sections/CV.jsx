@@ -8,7 +8,6 @@ const cvTabs = [
   { id: 'education', labelKey: 'tabs.education' },
   { id: 'projects', labelKey: 'tabs.projects' },
   { id: 'other', labelKey: 'tabs.other' },
-//   { id: 'references', labelKey: 'tabs.references' },
 ];
 
 function CV() {
@@ -27,8 +26,6 @@ function CV() {
         return <ProjectsTab data={content.CV.projects} />;
       case 'other':
         return <OtherTab data={content.CV} />;
-      // case 'references':
-      //   return <ReferencesTab data={content.CV.references} />;
       default:
         return <ProfileTab data={content.CV.profile} />;
     }
@@ -226,36 +223,6 @@ function OtherTab({ data }) {
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-function ReferencesTab({ data }) {
-  if (!data) return null;
-
-  return (
-    <div className={styles.referencesList}>
-      {data.map((ref) => (
-        <div key={ref.id} className={styles.referenceCard}>
-          <div className={styles.referenceHeader}>
-            <h3 className={styles.referenceName}>{ref.name}</h3>
-            <span className={styles.referenceRole}>{ref.role}</span>
-          </div>
-          <div className={styles.referenceDetails}>
-            <p className={styles.referenceCompany}>{ref.company}</p>
-          </div>
-          <div className={styles.referenceContact}>
-            <div className={styles.contactItem}>
-              <span className={styles.contactLabel}>📞</span>
-              <span>{ref.phone}</span>
-            </div>
-            <div className={styles.contactItem}>
-              <span className={styles.contactLabel}>✉️</span>
-              <span>{ref.email}</span>
-            </div>
-          </div>
-        </div>
-      ))}
     </div>
   );
 }

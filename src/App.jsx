@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import TabBar from "./components/layout/TabBar/TabBar";
-import Navbar from './components/layout/navbar';
+import Navbar from './components/layout/Navbar';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';

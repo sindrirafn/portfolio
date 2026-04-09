@@ -42,7 +42,7 @@ export const contentIs = {
     currently: "Ég er að byggja upp þessa vefsíðu, þróa verkefni og leita að tækifærum í hugbúnaðarþróun eða verkfræði.",
     linksLabel: "Tenglar",
     contactLabel: "Hafa samband",
-    contactText: "Endilega hafðu samband ef þú vilt ræða starf, verkefni eða samstarf.",
+    contactText: "Endilega hafðu samband ef þú vilt ræða atvinnutækifæri eða verkefni.",
     githubLabel: "GitHub",
     githubValue: "github.com/sindrirafn",
     githubUrl: "https://github.com/sindrirafn",

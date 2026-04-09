@@ -41,7 +41,7 @@ export const contentEn = {
     currently: "I am currently building this portfolio, developing projects, and looking for opportunities in software development or engineering.",
     linksLabel: "Links",
     contactLabel: "Contact",
-    contactText: "Feel free to reach out if you want to talk about work opportunities, projects, or collaboration.",
+    contactText: "Feel free to reach out if you want to talk about work opportunities or projects.",
     githubLabel: "GitHub",
     githubValue: "github.com/sindrirafn",
     githubUrl: "https://github.com/sindrirafn",

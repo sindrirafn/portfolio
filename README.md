@@ -1,16 +1,120 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer portfolio built to showcase my projects, skills, and experience in a clean and interactive way.
 
-Currently, two official plugins are available:
+This project focuses on simplicity, performance, and a polished user experience — with support for light/dark mode, smooth transitions, and a structured presentation of content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Clean, modern UI design
+- Light / Dark mode with smooth transitions
+- Responsive layout (desktop & mobile)
+- Interactive sections:
+  - About
+  - Skills
+  - Projects
+  - Contact
+- Dynamic project showcase
+- Structured and reusable component-based architecture
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+
+- React
+- JavaScript (ES6+)
+- CSS (custom styling)
+- Vite (build tool)
+
+---
+
+## 📂 Project Structure
+```text
+src/
+│
+├── components/     # Reusable UI components
+├── sections/       # Page sections (About, Skills, Projects, etc.)
+├── data/           # Static data (projects, skills, etc.)
+├── assets/         # Images and media
+└── App.jsx         # Main app entry
+```
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sindrirafn/my-website.git
+cd my-website
+```
+---
+### 2. Install dependancies
+```bash
+npm install
+```
+---
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+The site will be available at: 
+
+
+```code
+http://localhost:5173
+```
+
+---
+## 🎯 Purpose
+
+This project was built to:
+- Showcase my development skills in a practical way
+- Present my projects in a clean and accessible format
+- Serve as a central hub for my work and experience
+- Practice modern frontend development patterns
+
+---
+
+## 🧠 Design Philosophy
+- Clarity over complexity — simple, readable layout
+- Performance-focused — lightweight and fast
+- User-first — intuitive navigation and interaction
+- Consistency — reusable components and styling
+
+---
+
+## ⚙️ Future Improvements
+- Add animations and micro-interactions
+- Improve accessibility (ARIA, keyboard navigation)
+- Add CMS or dynamic content handling
+- Expand project showcase with more detailed case studies
+
+---
+
+## 📸 Preview
+
+![Screenshot of website](./public/projects/combined_preview.png)
+
+---
+
+🔗 Live Version
+
+...
+
+---
+
+👤 Author
+
+Sindri Rafn Guðmundsson
+
+---
+
+📄 License
+
+This project is for personal portfolio use.
+

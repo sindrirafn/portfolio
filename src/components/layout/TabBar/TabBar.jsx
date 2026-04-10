@@ -6,7 +6,6 @@ const defaultTabs = [
   { id: "cv", label: "CV" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
 ];
 
 function TabBar({ activeTab, onTabChange, tabs = defaultTabs }) {

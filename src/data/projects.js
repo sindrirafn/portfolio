@@ -1,10 +1,16 @@
 export const projects = [
   {
     id: "portfolio",
-    image: "/projects/combined_preview.png",
+    // image: "/projects/combined_preview.png",
+    compareImages: {
+      before: "/projects/portfolio_light.png",
+      after: "/projects/portfolio_dark.png",
+      beforeLabel: "Light",
+      afterLabel: "Dark",
+    },
     skills: ["react", "javascript", "html", "css", "system_design"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/sindrirafn/portfolio",
+    liveUrl: "https://sindrirafn.is",
     tryItOutUrl: "",
     status: "active",
     date: "2026",

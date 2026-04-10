@@ -9,6 +9,8 @@ import { LanguageProvider } from './components/LanguageContext';
 import { ThemeProvider } from './components/ThemeContext';
 import CV from './components/sections/CV';
 import ContentPanel from './components/layout/ContentPanel';
+import Footer from './components/layout/Footer';
+
 
 const tabs = [
   { id: "about" },
@@ -44,6 +46,7 @@ function App() {
             )}
           </ContentPanel>
         </div>
+        <Footer />
       </LanguageProvider>
     </ThemeProvider>
   );

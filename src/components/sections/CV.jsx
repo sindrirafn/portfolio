@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
-import styles from './CV.module.css';
+import styles from './CV_Dev.module.css';
 
 const cvTabs = [
   { id: 'profile', labelKey: 'tabs.profile' },
@@ -12,167 +12,139 @@ const cvTabs = [
 
 function CV() {
   const { content } = useLanguage();
-  const [activeTab, setActiveTab] = useState('profile');
+  const [activeTab, setActiveTab] = useState('experience');
+  const cvData = content.CV || {};
 
   const renderTabContent = () => {
     switch (activeTab) {
-      case 'profile':
-        return <ProfileTab data={content.CV.profile} />;
-      case 'experience':
-        return <ExperienceTab data={content.CV.experience} />;
-      case 'education':
-        return <EducationTab data={content.CV.education} />;
-      case 'projects':
-        return <ProjectsTab data={content.CV.projects} />;
-      case 'other':
-        return <OtherTab data={content.CV} />;
-      default:
-        return <ProfileTab data={content.CV.profile} />;
+      case 'profile':    return <ProfileTab data={cvData.profile} />;
+      case 'experience': return <ExperienceTab data={cvData.experience} />;
+      case 'education':  return <EducationTab data={cvData.education} />;
+      case 'projects':   return <ProjectsTab data={cvData.projects} />;
+      case 'other':      return <OtherTab data={cvData} />;
+      default:           return <ProfileTab data={cvData.profile} />;
     }
   };
 
   return (
-    <>
-      {/* CV Layout - Sidebar and Content */}
-      <div className={styles.cvLayout}>
-        {/* Vertical Tabs Sidebar */}
-        <div className={styles.tabsSidebar}>
-          {cvTabs.map((tab) => {
-            const isActive = activeTab === tab.id;
-            const label = content.CV?.tabs?.[tab.id] || tab.labelKey;
+    <div className={styles.cvWrapper}>
+      <div className={styles.tabBar} role="tablist">
+        {cvTabs.map((tab) => {
+          const isActive = activeTab === tab.id;
+          const label = cvData.tabs?.[tab.id] || tab.labelKey;
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              className={`${styles.tabBarItem} ${isActive ? styles.tabBarItemActive : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
 
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                aria-current={isActive ? 'page' : undefined}
-                className={`${styles.verticalTab} ${isActive ? styles.verticalTabActive : ''}`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <span className={styles.verticalTabLabel}>{label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Content Area */}
-        <div className={styles.tabContent}>
+      <div className={styles.contentArea}>
+        <div className={styles.mainContent}>
           {renderTabContent()}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 function ProfileTab({ data }) {
   if (!data) return null;
-
   return (
-    <div className={styles.profileContent}>
-      <div className={styles.profileHeader}>
-        <h3 className={styles.profileName}>{data.name}</h3>
-        {/* <div className={styles.contactInfo}>
-          <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>📞</span>
-            <span>{data.phone}</span>
-          </div>
-          <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>✉️</span>
-            <span>{data.email}</span>
-          </div>
-          <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>📍</span>
-            <span>{data.location}</span>
-          </div>
-        </div> */}
-      </div>
-
-      <div className={styles.profileSummary}>
-        {/* <h4>Professional Summary</h4> */}
-        {data.summary?.map((paragraph, index) => (
-          <p key={index} className={styles.summaryParagraph}>
-            {paragraph}
-          </p>
-        ))}
-      </div>
+    <div className={styles.section}>
+      <h2 className={styles.sectionHeading}>Profile</h2>
+      {data.summary?.map((p, i) => (
+        <p key={i} className={styles.paragraphMuted}>{p}</p>
+      ))}
     </div>
   );
 }
 
 function ExperienceTab({ data }) {
   if (!data) return null;
-
   return (
-    <div className={styles.experienceList}>
-      {data.map((exp) => (
-        <div key={exp.id} className={styles.experienceItem}>
-          <div className={styles.experienceHeader}>
-            <h3 className={styles.experienceTitle}>{exp.title}</h3>
-            <div className={styles.experienceMeta}>
-              <span className={styles.company}>{exp.company}</span>
-              {exp.location && <span className={styles.location}>{exp.location}</span>}
-              <span className={styles.period}>{exp.startLabel} - {exp.endLabel}</span>
+    <div className={styles.section}>
+      <h2 className={styles.sectionHeading}>Experience</h2>
+      <p className={styles.sectionSubtitle}>A summary of my professional background.</p>
+      <div className={styles.timeline}>
+        {data.map((exp) => (
+          <div key={exp.id} className={styles.timelineEntry}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>{exp.startLabel}<br />– {exp.endLabel}</span>
+            </div>
+            <div className={styles.timelineDot} />
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineTitle}>{exp.title}</h3>
+              {exp.company && (
+                <p className={styles.timelineCompany}>
+                  {exp.company}{exp.location ? ` · ${exp.location}` : ''}
+                </p>
+              )}
+              {exp.bullets?.length > 0 && (
+                <ul className={styles.timelineBullets}>
+                  {exp.bullets.map((b, i) => (
+                    <li key={i} className={styles.timelineBullet}>{b}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
-          {exp.bullets && exp.bullets.length > 0 && (
-            <ul className={styles.achievementsList}>
-              {exp.bullets.map((achievement, i) => (
-                <li key={i} className={styles.achievement}>{achievement}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
 
 function EducationTab({ data }) {
   if (!data) return null;
-
   return (
-    <div className={styles.educationList}>
-      {data.map((edu) => (
-        <div key={edu.id} className={styles.educationItem}>
-          <div className={styles.educationHeader}>
-            <h3 className={styles.educationDegree}>{edu.degree}</h3>
-            <div className={styles.educationMeta}>
-              <span className={styles.school}>{edu.school}</span>
-              <span className={styles.period}>{edu.startLabel} - {edu.endLabel}</span>
+    <div className={styles.section}>
+      <h2 className={styles.sectionHeading}>Education</h2>
+      <div className={styles.timeline}>
+        {data.map((edu) => (
+          <div key={edu.id} className={styles.timelineEntry}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>{edu.startLabel}<br />– {edu.endLabel}</span>
+            </div>
+            <div className={styles.timelineDot} />
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineTitle}>{edu.degree}</h3>
+              <p className={styles.timelineCompany}>{edu.school}</p>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
 
 function ProjectsTab({ data }) {
   if (!data) return null;
-
   return (
-    <div className={styles.projectsList}>
+    <div className={styles.section}>
+      <h2 className={styles.sectionHeading}>Projects</h2>
       {data.map((project) => (
-        <div key={project.id} className={styles.projectItem}>
-          <div className={styles.projectHeader}>
-            <h3 className={styles.projectTitle}>{project.title}</h3>
+        <div key={project.id} className={styles.projectEntry}>
+          <div className={styles.projectEntryHeader}>
+            <h3 className={styles.timelineTitle}>{project.title}</h3>
             {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
-                View on GitHub →
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                GitHub →
               </a>
             )}
           </div>
-          {project.imageSrc && (
-            <div className={styles.projectImageWrapper}>
-              <img src={project.imageSrc} alt={`${project.title} screenshot`} className={styles.projectImage} />
-            </div>
-          )}
-          {project.bullets && project.bullets.length > 0 && (
-            <ul className={styles.projectBullets}>
-              {project.bullets.map((bullet, i) => (
-                <li key={i} className={styles.projectBullet}>{bullet}</li>
+          {project.bullets?.length > 0 && (
+            <ul className={styles.timelineBullets}>
+              {project.bullets.map((b, i) => (
+                <li key={i} className={styles.timelineBullet}>{b}</li>
               ))}
             </ul>
           )}
@@ -184,44 +156,34 @@ function ProjectsTab({ data }) {
 
 function OtherTab({ data }) {
   if (!data) return null;
-
   const sectionLabels = data.otherSections || {};
-
   return (
-    <div className={styles.skillsContent}>
-      {/* Languages */}
-      <div className={styles.skillSection}>
-        <h3 className={styles.skillSectionTitle}>{sectionLabels.languages || 'Languages'}</h3>
-        <div className={styles.skillList}>
-          {data.languages?.map((lang) => (
-            <div key={lang.id} className={styles.skillItem}>
-              <div className={styles.skillHeader}>
-                <span className={styles.skillName}>{lang.name}</span>
-                <span className={styles.skillLevel}>{lang.level}/{lang.max}</span>
-              </div>
-              <div className={styles.skillBar}>
-                <div
-                  className={styles.skillProgress}
-                  style={{ width: `${(lang.level / lang.max) * 100}%` }}
-                />
-              </div>
+    <div className={styles.section}>
+      <h2 className={styles.sectionHeading}>{sectionLabels.languages || 'Languages'}</h2>
+      <div className={styles.languageList}>
+        {data.languages?.map((lang) => (
+          <div key={lang.id} className={styles.languageItem}>
+            <div className={styles.languageHeader}>
+              <span>{lang.name}</span>
+              <span className={styles.languageLevel}>{lang.level}/{lang.max}</span>
             </div>
-          ))}
-        </div>
+            <div className={styles.skillBar}>
+              <div className={styles.skillProgress} style={{ width: `${(lang.level / lang.max) * 100}%` }} />
+            </div>
+          </div>
+        ))}
       </div>
-
-      {/* Interests */}
-      {data.interests && data.interests.length > 0 && (
-        <div className={styles.skillSection}>
-          <h3 className={styles.skillSectionTitle}>{sectionLabels.interests || 'Interests'}</h3>
-          <div className={styles.interestsList}>
-            {data.interests.map((interest, index) => (
-              <span key={index} className={styles.interestTag}>
-                {interest}
-              </span>
+      {data.interests?.length > 0 && (
+        <>
+          <h2 className={`${styles.sectionHeading} ${styles.sectionHeadingSpaced}`}>
+            {sectionLabels.interests || 'Interests'}
+          </h2>
+          <div className={styles.strengthsChips}>
+            {data.interests.map((interest, i) => (
+              <span key={i} className={styles.strengthChip}>{interest}</span>
             ))}
           </div>
-        </div>
+        </>
       )}
     </div>
   );

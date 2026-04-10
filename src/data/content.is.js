@@ -46,7 +46,7 @@ export const contentIs = {
     githubLabel: "GitHub",
     githubValue: "github.com/sindrirafn",
     githubUrl: "https://github.com/sindrirafn",
-    linkedInUrl: "",
+    linkedInUrl: "https://www.linkedin.com/in/sindri-rafn",
     emailLabel: "Tölvupóstur",
     email: "sindrig94@gmail.com",
     phoneLabel: "Sími",

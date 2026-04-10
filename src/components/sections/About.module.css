@@ -1,8 +1,7 @@
 .layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.95fr);
+  display: flex;
+  flex-direction: column;
   gap: var(--space-7);
-  align-items: start;
 }
 
 .primary {
@@ -10,6 +9,7 @@
   flex-direction: column;
   gap: var(--space-5);
   min-width: 0;
+  width: 100%;
 }
 
 .header {
@@ -35,7 +35,6 @@
 
 .introParagraph {
   margin: 0;
-  max-width: 68ch;
   color: var(--text-muted);
   line-height: 1.75;
   font-size: 1.03rem;
@@ -63,180 +62,7 @@
   color: var(--text);
   line-height: 1.7;
   font-weight: 500;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  padding: var(--space-5);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background:
-    linear-gradient(180deg, var(--accent-bg), transparent 36%),
-    var(--surface-2);
-  box-shadow: var(--shadow-xs);
-}
-
-.sidebarSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.sidebarSection + .sidebarSection {
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--border);
-}
-
-.sidebarTitle {
-  margin: 0;
-  color: var(--text);
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-
-.linkList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.linkItem,
-.emailLink {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-3);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: var(--surface-card);
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  transition:
-    transform var(--transition-fast),
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.linkItem::before,
-.emailLink::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: transparent;
-  transition: background var(--transition-fast);
-}
-
-.linkItem:hover,
-.emailLink:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-border);
-  background: var(--surface-card-hover);
-  box-shadow: var(--shadow-sm);
-}
-
-.linkItem:hover::before,
-.emailLink:hover::before {
-  background: var(--accent);
-}
-
-.linkItem:focus-visible,
-.emailLink:focus-visible,
-.contactItem:focus-visible {
-  outline: none;
-  border-color: var(--accent);
-  background: var(--surface-card-hover);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-.linkItem:focus-visible::before,
-.emailLink:focus-visible::before {
-  background: var(--accent);
-}
-
-.linkIcon {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--radius-pill);
-  color: var(--accent);
-  background: var(--surface-solid);
-  border: 1px solid var(--accent-border);
-}
-
-.linkIcon svg {
-  width: 1.1rem;
-  height: 1.1rem;
-}
-
-.linkCopy,
-.emailCopy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0;
-}
-
-.linkLabel {
-  color: var(--text-soft);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.linkValue {
-  color: var(--text);
-  font-weight: 600;
-  word-break: break-word;
-}
-
-.contactText {
-  margin: 0;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-
-.contactList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.contactItem {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-3);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: var(--surface-card);
-  text-decoration: none;
-  color: inherit;
-  transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.contactItem:hover {
-  border-color: var(--accent-border);
-  background: var(--surface-card-hover);
-}
-
-@media (max-width: 920px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
+  max-width: none;
 }
 
 @media (max-width: 640px) {
@@ -246,9 +72,5 @@
 
   .title {
     font-size: 1.8rem;
-  }
-
-  .sidebar {
-    padding: var(--space-4);
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
-import styles from './CV_Dev.module.css';
+import styles from './CV.module.css';
 
 const cvTabs = [
   { id: 'profile', labelKey: 'tabs.profile' },

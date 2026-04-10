@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { useLanguage } from "../LanguageContext";
 import { projects } from "../../data/projects";
 import skillStyles from "./Skills.module.css";
-import styles from "./Projects_Dev.module.css";
+import styles from "./Projects.module.css";
 import ImageCompareSlider from "../ui/ImageCompareSlider";
 
 function ProjectLinkIcon({ id }) {

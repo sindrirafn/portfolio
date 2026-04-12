@@ -8,7 +8,7 @@ export const projects = [
       beforeLabel: "Light",
       afterLabel: "Dark",
     },
-    skills: ["react", "javascript", "html", "css", "system_design"],
+    skills: ["react", "javascript", "html", "css", "system_design", "user_focused_development", "frontend_development"],
     githubUrl: "https://github.com/sindrirafn/portfolio",
     liveUrl: "https://sindrirafn.is",
     tryItOutUrl: "",
@@ -19,7 +19,7 @@ export const projects = [
   {
     id: "tasklist",
     image: "/projects/tasklist_mainscreen.png",
-    skills: ["react", "dotnet", "sql", "fullstack", "api_development"],
+    skills: ["react", "dotnet", "sql", "fullstack", "api_development", "user_focused_development", "frontend_development", "backend"],
     githubUrl: "https://github.com/sindrirafn/TaskList",
     liveUrl: "",
     tryItOutUrl: "",

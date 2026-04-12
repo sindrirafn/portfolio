@@ -60,7 +60,7 @@ function ProfileTab({ data }) {
   if (!data) return null;
   return (
     <div className={styles.section}>
-      <h2 className={styles.sectionHeading}>Profile</h2>
+      {/* <h2 className={styles.sectionHeading}>Profile</h2> */}
       {data.summary?.map((p, i) => (
         <p key={i} className={styles.paragraphMuted}>{p}</p>
       ))}
@@ -72,8 +72,9 @@ function ExperienceTab({ data }) {
   if (!data) return null;
   return (
     <div className={styles.section}>
-      <h2 className={styles.sectionHeading}>Experience</h2>
-      <p className={styles.sectionSubtitle}>A summary of my professional background.</p>
+      {/* <h2 className={styles.sectionHeading}>Experience</h2>
+      <p className={styles.sectionSubtitle}>A summary of my professional background.</p> */}
+      
       <div className={styles.timeline}>
         {data.map((exp) => (
           <div key={exp.id} className={styles.timelineEntry}>
@@ -107,7 +108,7 @@ function EducationTab({ data }) {
   if (!data) return null;
   return (
     <div className={styles.section}>
-      <h2 className={styles.sectionHeading}>Education</h2>
+      {/* <h2 className={styles.sectionHeading}>Education</h2> */}
       <div className={styles.timeline}>
         {data.map((edu) => (
           <div key={edu.id} className={styles.timelineEntry}>
@@ -130,7 +131,7 @@ function ProjectsTab({ data }) {
   if (!data) return null;
   return (
     <div className={styles.section}>
-      <h2 className={styles.sectionHeading}>Projects</h2>
+      {/* <h2 className={styles.sectionHeading}>Projects</h2> */}
       {data.map((project) => (
         <div key={project.id} className={styles.projectEntry}>
           <div className={styles.projectEntryHeader}>

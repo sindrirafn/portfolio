@@ -1,16 +1,17 @@
 export const skills = {
   core: [
     "csharp",
-    "dotnet",
     "python",
     "javascript",
     "sql",
     "html",
     "css",
-    "cpp"
+    "cpp",
+    "r"
   ],
   tools: [
     "react",
+    "dotnet",
     "django",
     "node",
     "flutter",
@@ -20,7 +21,8 @@ export const skills = {
     "linux",
     "bash",
     "azure",
-    "jira"
+    "jira",
+    "matlab"
   ],
   concepts: [
     "backend",
@@ -32,7 +34,16 @@ export const skills = {
     // "state_management",
     "testing",
     "debugging",
-    "version_control"
+    "version_control",
+    "frontend_development",
+    "systems_work",
+    "automation",
+    "user_focused_development",
+    "data_analysis",
+    "data_visualization",
+    "statistical_analysis",
+    "simulation",
+    "data_processing"
   ],
   professional: [
     "communication",
@@ -41,6 +52,10 @@ export const skills = {
     "attention_to_detail",
     "adaptability",
     "fast_learner",
-    "problem_solving"
+    "problem_solving",
+    "engineering_mindset",
+    "collaboration",
+    "critical_thinking",
+    "creativity"
   ]
 };

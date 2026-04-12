@@ -39,7 +39,7 @@ export const contentIs = {
         // ],
         introParagraphs: [
             "Ég er með bakgrunn í tölvunarfræði og heilbrigðisverkfræði og hef starfað í tæknilegu umhverfi við uppsetningu lausna, viðhald og tæknilega aðstoð.",
-            "Undanfarið hef ég lagt aukna áherslu á hugbúnaðarþróun og unnið að eigin verkefnum þar sem ég hef byggt upp lausnir frá grunni. Samhliða því hef ég áhuga á verkfræðilegum verkefnum og hvernig hægt er að beita tæknilegri þekkingu á fjölbreytt vandamál.",
+            "Undanfarið hef ég lagt aukna áherslu á hugbúnaðarþróun og unnið að eigin verkefnum þar sem ég hef byggt upp lausnir frá grunni. Ég hef jafnframt áhuga á verkfræðilegum verkefnum og því að beita tæknilegri þekkingu á raunveruleg vandamál.",
             "Verkfræðibakgrunnurinn minn hefur haft mikil áhrif á hvernig ég nálgast verkefni — ég legg áherslu á að skilja vandamálið vel og byggja einfaldar, skýrar og áreiðanlegar lausnir.",
             "Ég er alltaf að leita að tækifærum til að læra og vaxa á nýjum sviðum, og ég er spenntur fyrir því að takast á við nýjar áskoranir í hugbúnaðarþróun og verkfræði."
         ],

@@ -37,7 +37,7 @@ export const contentEn = {
         // ],
         introParagraphs: [
             "I have a background in computer science and biomedical engineering and have worked in technical environments on solution setup, maintenance, and technical support.",
-            "Recently, I have focused more on software development and worked on personal projects where I built solutions from scratch. Alongside this, I have an interest in engineering projects and how technical knowledge can be applied to diverse problems.",
+            "Recently, I have focused more on software development and worked on personal projects where I built solutions from scratch. I have also maintained an interest in engineering projects and applying technical knowledge to real-world problems.",
             "My engineering background has greatly influenced how I approach projects — I emphasize understanding the problem well and building simple, clear, and reliable solutions.",
             "I am always looking for opportunities to learn and grow in new areas, and I am excited to take on new challenges in software development and engineering."
         ],

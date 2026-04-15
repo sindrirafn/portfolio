@@ -104,10 +104,10 @@ This project was built to:
 
 🔗 Live Version
 
-Live demo (temporary link) at:
+Live at:
 
 ```code
-https://my-website-ch1.pages.dev
+https://sindrirafn.is
 ```
 
 

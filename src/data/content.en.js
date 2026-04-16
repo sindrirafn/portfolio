@@ -325,9 +325,11 @@ export const contentEn = {
                 title: "Case Management System",
                 summary: "A case management system designed to streamline workflows, improve task visibility, and provide a practical solution for day-to-day work.",
                 highlights: [
-                    "Built a full-stack case management system with a React frontend and .NET backend.",
-                    "Focused on clear structure, practical features, and good user experience.",
-                    "Implemented key functionality including case creation, status overview, and interactive modals."
+                    "Developing a full-stack case management system with a React frontend and .NET backend.",
+                    "Designed and implemented a REST API for managing cases, users, and comments.",
+                    "Built a data model and storage solution using SQL database.",
+                    "Implemented key features such as status management, filtering, and access control.",
+                    "Focused on clear structure, separation of concerns, and practical usage."
                 ],
                 imageAlt: "Case Management System project preview"
             }

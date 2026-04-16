@@ -311,6 +311,18 @@ export const contentIs = {
                     "Lagði áherslu á fágaða hönnun og notendaupplifun."
                 ],
                 imageAlt: "Skjáskot af portfolio vefsíðu"
+            },
+            case_system: {
+                title: "Málastjórnunarkerfi",
+                summary: "Full-stack kerfi fyrir málastjórnun, með áherslu á skýra uppbyggingu, aðskilnað laga og raunhæfa notkun í daglegu starfi.",
+                highlights: [
+                    "Þróa full-stack málastjórnunarkerfi með React framenda og .NET bakenda",
+                    "Hanna og útfæri REST API fyrir meðhöndlun mála, notenda og athugasemda",
+                    "Byggi upp gagnalíkan og gagnageymslu með SQL gagnagrunni",
+                    "Innleiði lykilvirkni eins og stöðustjórnun, síun og aðgangsstýringu",
+                    "Legg áherslu á skýra uppbyggingu, aðskilnað laga og raunhæfa notkun"
+                ],
+                imageAlt: "Skjáskot kemur fljótlega"
             }
         }
     }

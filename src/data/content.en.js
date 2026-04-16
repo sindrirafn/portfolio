@@ -294,7 +294,9 @@ export const contentEn = {
             github: "GitHub Repository",
             live: "Live Site",
             tryItOut: "Try It Out",
-            imageFallback: "Preview coming soon"
+            imageFallback: "Preview coming soon",
+            viewOnGithub: "View on GitHub",
+            viewLive: "View Live"
         },
         statuses: {
             completed: "Completed",

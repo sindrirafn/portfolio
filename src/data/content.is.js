@@ -285,7 +285,9 @@ export const contentIs = {
             github: "GitHub svæði",
             live: "Vefsvæði",
             tryItOut: "Prófa",
-            imageFallback: "Forskoðun kemur fljótlega"
+            imageFallback: "Forskoðun kemur fljótlega",
+            viewOnGithub: "Skoða á GitHub",
+            viewLive: "Skoða vefsíðu"
         },
         statuses: {
             completed: "Lokið",

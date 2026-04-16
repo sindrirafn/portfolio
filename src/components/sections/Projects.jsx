@@ -154,26 +154,24 @@ function Projects() {
             <p className={styles.projectSummary}>{activeText.summary}</p>
           )}
 
-          <div className={styles.previewSurface}>
-            {activeProject.compareImages ? (
-              <ImageCompareSlider
-                before={activeProject.compareImages.before}
-                after={activeProject.compareImages.after}
-                beforeLabel={activeProject.compareImages.beforeLabel}
-                afterLabel={activeProject.compareImages.afterLabel}
-              />
-            ) : activeProject.image ? (
-              <img
-                src={activeProject.image}
-                alt={activeText.imageAlt || activeText.title || activeProject.id}
-                className={styles.previewImage}
-              />
-            ) : (
-              <div className={styles.previewFallback}>
-                {pageContent.labels?.imageFallback || "Preview coming soon"}
-              </div>
-            )}
-          </div>
+          {(activeProject.compareImages || activeProject.image) && (
+            <div className={styles.previewSurface}>
+              {activeProject.compareImages ? (
+                <ImageCompareSlider
+                  before={activeProject.compareImages.before}
+                  after={activeProject.compareImages.after}
+                  beforeLabel={activeProject.compareImages.beforeLabel}
+                  afterLabel={activeProject.compareImages.afterLabel}
+                />
+              ) : (
+                <img
+                  src={activeProject.image}
+                  alt={activeText.imageAlt || activeText.title || activeProject.id}
+                  className={styles.previewImage}
+                />
+              )}
+            </div>
+          )}
 
           <section className={styles.sectionBlock}>
             <h3 className={styles.sectionHeading}>{pageContent.labels?.skills || "Skills & Technologies"}</h3>

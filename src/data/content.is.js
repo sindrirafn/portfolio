@@ -182,6 +182,9 @@ export const contentIs = {
                 ]
             }
         ],
+        projectsCallToAction: {
+            text: "Skoða verkefnaferil"
+        },
         languages: [
             { id: "is", name: "Íslenska", level: 5, max: 5 },
             { id: "en", name: "Enska", level: 5, max: 5 },

@@ -180,6 +180,9 @@ export const contentEn = {
                 ]
             }
         ],
+        projectsCallToAction: {
+            text: "View project portfolio"
+        },
         languages: [
             { id: "is", name: "Icelandic", level: 5, max: 5 },
             { id: "en", name: "English", level: 5, max: 5 },
@@ -269,7 +272,18 @@ export const contentEn = {
             frontend_development: "Frontend Development",
             systems_work: "Systems Work",
             automation: "Automation",
-            user_focused_development: "User-focused Development"
+            user_focused_development: "User-focused Development",
+            typescript: "TypeScript",
+            system_administration: "System Administration",
+            cloud_services: "Cloud Services",
+            performance_optimization: "Performance Optimization",
+            security_best_practices: "Security Best Practices",
+            code_review: "Code Review",
+            documentation: "Documentation",
+            mentoring: "Mentoring",
+            project_management: "Project Management",
+            agile_methodologies: "Agile Methodologies",
+            devops_practices: "DevOps Practices"
         }
     },
     projectsPage: {
@@ -306,7 +320,18 @@ export const contentEn = {
                     "Emphasized polished design and user experience."
                 ],
                 imageAlt: "Portfolio website project preview"
+            },
+            case_system: {
+                title: "Case Management System",
+                summary: "A case management system designed to streamline workflows, improve task visibility, and provide a practical solution for day-to-day work.",
+                highlights: [
+                    "Built a full-stack case management system with a React frontend and .NET backend.",
+                    "Focused on clear structure, practical features, and good user experience.",
+                    "Implemented key functionality including case creation, status overview, and interactive modals."
+                ],
+                imageAlt: "Case Management System project preview"
             }
+
         }
     }
     // Add more sections as needed

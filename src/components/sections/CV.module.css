@@ -236,6 +236,76 @@
   color: var(--accent-strong);
 }
 
+.projectPortfolioLink {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.6;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: color var(--transition-fast);
+}
+
+.projectPortfolioLink:hover {
+  color: var(--accent-strong);
+}
+
+.projectPortfolioLink:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.projectPortfolioLinkText {
+  position: relative;
+}
+
+.projectPortfolioLinkText::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.08rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  transition: opacity var(--transition-fast);
+}
+
+.projectPortfolioLink:hover .projectPortfolioLinkText::after,
+.projectPortfolioLink:focus-visible .projectPortfolioLinkText::after {
+  opacity: 0.7;
+}
+
+.projectPortfolioLinkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--text-muted);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.projectPortfolioLink:hover .projectPortfolioLinkIcon,
+.projectPortfolioLink:focus-visible .projectPortfolioLinkIcon {
+  transform: translateX(2px);
+  color: var(--accent-strong);
+}
+
+.projectPortfolioLinkIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
 /* ── Other tab ── */
 .languageList {
   display: flex;

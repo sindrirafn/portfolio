@@ -36,7 +36,7 @@ function App() {
               <About />
             )}
             {activeTab === "cv" && (
-              <CV />
+              <CV onNavigateToTab={setActiveTab} />
             )}
             {activeTab === "skills" && (
               <Skills />

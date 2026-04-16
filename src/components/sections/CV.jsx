@@ -10,7 +10,7 @@ const cvTabs = [
   { id: 'other', labelKey: 'tabs.other' },
 ];
 
-function CV() {
+function CV({ onNavigateToTab }) {
   const { content } = useLanguage();
   const [activeTab, setActiveTab] = useState('experience');
   const cvData = content.CV || {};
@@ -20,7 +20,7 @@ function CV() {
       case 'profile':    return <ProfileTab data={cvData.profile} />;
       case 'experience': return <ExperienceTab data={cvData.experience} />;
       case 'education':  return <EducationTab data={cvData.education} />;
-      case 'projects':   return <ProjectsTab data={cvData.projects} />;
+      case 'projects':   return <ProjectsTab callToAction={cvData.projectsCallToAction} onNavigateToTab={onNavigateToTab} />;
       case 'other':      return <OtherTab data={cvData} />;
       default:           return <ProfileTab data={cvData.profile} />;
     }
@@ -127,30 +127,36 @@ function EducationTab({ data }) {
   );
 }
 
-function ProjectsTab({ data }) {
-  if (!data) return null;
+function ProjectsTab({ callToAction, onNavigateToTab }) {
+  const ctaText = callToAction?.text || 'View project portfolio';
+
+  const handleNavigate = () => {
+    if (typeof onNavigateToTab === 'function') {
+      onNavigateToTab('projects');
+    }
+  };
+
   return (
     <div className={styles.section}>
-      {/* <h2 className={styles.sectionHeading}>Projects</h2> */}
-      {data.map((project) => (
-        <div key={project.id} className={styles.projectEntry}>
-          <div className={styles.projectEntryHeader}>
-            <h3 className={styles.timelineTitle}>{project.title}</h3>
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                GitHub →
-              </a>
-            )}
-          </div>
-          {project.bullets?.length > 0 && (
-            <ul className={styles.timelineBullets}>
-              {project.bullets.map((b, i) => (
-                <li key={i} className={styles.timelineBullet}>{b}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
+      <button
+        type="button"
+        className={styles.projectPortfolioLink}
+        onClick={handleNavigate}
+      >
+        <span className={styles.projectPortfolioLinkText}>{ctaText}</span>
+        <span className={styles.projectPortfolioLinkIcon} aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path
+              d="M5 12h12m-5-5 5 5-5 5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
+      </button>
     </div>
   );
 }

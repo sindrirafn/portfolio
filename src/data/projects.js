@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: "case_system",
+    // image: "/projects/case_system.png",
+    skills: ["react", "typescript", "html", "css", "system_design", "user_focused_development", "frontend_development", "backend", "dotnet", "sql", "fullstack", "api_development"],
+    githubUrl: "https://github.com/sindrirafn/case_system",
+    liveUrl: "",
+    tryItOutUrl: "",
+    status: "active",
+    date: "2026",
+    featured: true,
+  },
+  {
     id: "portfolio",
     // image: "/projects/combined_preview.png",
     compareImages: {

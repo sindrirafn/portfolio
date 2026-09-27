@@ -79,6 +79,9 @@ function ExperienceTab({ data }) {
         {data.map((exp) => (
           <div key={exp.id} className={styles.timelineEntry}>
             <div className={styles.timelineMeta}>
+              {exp.start2 && (
+                <span className={styles.timelineDate}>{exp.startLabel2}<br />– {exp.endLabel2}<br />·<br /></span>
+              )}
               <span className={styles.timelineDate}>{exp.startLabel}<br />– {exp.endLabel}</span>
             </div>
             <div className={styles.timelineDot} />

@@ -29,10 +29,10 @@ function About() {
           ))}
         </div>
 
-        <div className={styles.currentlyBlock}>
+        {/* <div className={styles.currentlyBlock}>
           <h3 className={styles.currentlyTitle}>{currentlyLabel}</h3>
           <p className={styles.currentlyText}>{currently}</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

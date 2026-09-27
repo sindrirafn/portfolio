@@ -188,6 +188,22 @@
   font-weight: 500;
 }
 
+.projectHeading {
+  /* font-size: 0.9rem; */
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: var(--space-0);
+  padding: 0;
+}
+
+.projectSubHeading{
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  font-weight: 500;
+  margin-top: var(--space-1);
+}
+
 .projectSummary {
   margin: 0 0 var(--space-5);
   color: var(--text-muted);
@@ -233,7 +249,7 @@
 .previewImage {
   width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 16 / 9;
 }
 

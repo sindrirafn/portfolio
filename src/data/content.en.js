@@ -22,8 +22,8 @@ export const contentEn = {
     IntroPanel: {
         name: "Sindri Rafn Guðmundsson",
         // title: "Software Specialist / Developer",
-        title: "Computer Science · Engineering",
-        intro: "I work on developing solutions — both in software and engineering projects — with a focus on simplicity and clear structure.",
+        title: "Biomedical Engineering · Computer Science",
+        intro: "I like understanding how things work, solving problems, and building practical solutions.",
         imageSrc: "",
         imageAlt: "Portrait of Sindri Rafn Guðmundsson",
         badges: ["React", ".NET", "SQL", "Power BI"]
@@ -36,10 +36,8 @@ export const contentEn = {
         //     "I focus on clear structure, good user experience, and solutions that are practical in day-to-day work."
         // ],
         introParagraphs: [
-            "I have a background in computer science and biomedical engineering and have worked in technical environments on solution setup, maintenance, and technical support.",
-            "Recently, I have focused more on software development and worked on personal projects where I built solutions from scratch. I have also maintained an interest in engineering projects and applying technical knowledge to real-world problems.",
-            "My engineering background has greatly influenced how I approach projects — I emphasize understanding the problem well and building simple, clear, and reliable solutions.",
-            "I am always looking for opportunities to learn and grow in new areas, and I am excited to take on new challenges in software development and engineering."
+            "I have B.Sc. degrees in Biomedical Engineering and Computer Science. What I enjoy most is solving problems, building something new and understanding how things work. That curiosity is a large part of why I ended up studying both engineering and computer science in the first place.",
+            "I'm open to opportunities across engineering and technology where that combination of backgrounds can be useful. I'm particularly drawn to work where I can dig into a problem, understand it properly and turn that understanding into something useful."
         ],
 
         intro: "I am a software specialist with a background in computer science and biomedical engineering.",
@@ -50,9 +48,9 @@ export const contentEn = {
         linksLabel: "Links",
         contactLabel: "Contact",
         contactText: "Feel free to reach out if you want to talk about work opportunities or projects.",
-        githubLabel: "GitHub",
-        githubValue: "github.com/sindrirafn",
-        githubUrl: "https://github.com/sindrirafn",
+        // githubLabel: "GitHub",
+        // githubValue: "github.com/sindrirafn",
+        // githubUrl: "https://github.com/sindrirafn",
         linkedInUrl: "https://www.linkedin.com/in/sindri-rafn",
         emailLabel: "Email",
         email: "sindrig94@gmail.com",
@@ -82,56 +80,44 @@ export const contentEn = {
             email: "sindrig94@gmail.com",
             location: "Dalahraun 13, 810 Hveragerði",
             summary: [
-                "I am educated in biomedical engineering and computer science. In my role as a software specialist at Spektra, I handled the setup and maintenance of solutions, along with user support and data migration work. The job was diverse and required both precision and solution-oriented thinking.",
-                "Previously, I worked for seven years at a residential home for people with autism, where I gained extensive experience in teamwork, communication with individuals with diverse needs, and handling challenging situations.",
-                "I am ready to take on new challenges and adapt quickly to changes and learn new things."
+                "I have B.Sc. degrees in Biomedical Engineering and Computer Science and have spent the last few years working on software solutions and technical user support. I enjoy solving problems, building something new and understanding how things work. I am comfortable diving into new subject areas and learning what is needed to turn ideas into working solutions.",
             ]
         },
         experience: [
             {
+                id: "joklasel",
+                title: "Support Worker",
+                company: "City of Reykjavík - Jöklasel/Brekknaás",
+                location: "Reykjavík",
+                start: "2016-04",
+                end: "2023-06",
+                startLabel: "April 2016",
+                endLabel: "June 2023",
+                start2: "2026-05",
+                end2: null,
+                startLabel2: "May 2026",
+                endLabel2: "Current",
+                bullets: [
+                    "Supported autistic adults and individuals with extensive support needs in daily life, including personal care, household tasks, meals and leisure activities.",
+                    "Worked according to individualized support plans and procedures, with a strong focus on consistency, routine and reliable day-to-day support.",
+                    "Handled demanding situations calmly and patiently, with attention to preventing and reducing stress while ensuring safety and wellbeing for residents and staff."
+                ]
+            },
+            {
                 id: "spektra",
                 title: "Software Specialist",
                 company: "Spektra",
-                location: "Laugarvegur 128, 105 Reykjavík",
+                location: "Reykjavík",
                 start: "2023-07",
                 end: "2025-09",
                 startLabel: "July 2023",
                 endLabel: "September 2025",
                 bullets: [
-                    "Setup, maintenance and adaptation of solutions (SharePoint and WorkPoint)",
-                    "Technical analysis and troubleshooting",
-                    "User support and communication with clients",
-                    "Data migration between systems and environments",
-                    "Automation and simplification of workflows using PowerShell and Power Automate"
-                ]
-            },
-            {
-                id: "joklasel",
-                title: "Support Worker",
-                company: "Íbúðarkjarninn Jöklaseli",
-                location: "Jöklasel 2, 109 Reykjavík",
-                start: "2016-04",
-                end: "2023-06",
-                startLabel: "April 2016",
-                endLabel: "June 2023",
-                bullets: [
-                    "Support for individuals with autism in daily life",
-                    "Work according to clear procedures and in teams",
-                    "Responsibility, patience and professional approach in challenging situations"
-                ]
-            },
-            {
-                id: "blonduos-pool",
-                title: "Pool Attendant",
-                company: "Íþróttamiðstöðin á Blönduósi",
-                location: "Melabraut 2, 540 Blönduósi",
-                start: "2014",
-                end: "2015",
-                startLabel: "2014",
-                endLabel: "2015",
-                bullets: [
-                    "Supervision and cleaning of pool area and related facilities",
-                    "Guest service and ensuring safety and compliance"
+                    "Set up, maintained and adapted solutions in SharePoint and WorkPoint, including websites, lists, document libraries, metadata and permissions.",
+                    "Analyzed and resolved technical problems for clients.",
+                    "Worked on large-scale data migrations between systems and environments using PowerShell and ShareGate, alongside validation of results.",
+                    "Designed and built automated processes in Power Automate, including both simple and more complex flows that replaced manual work.",
+                    "Used PowerShell for installations, data imports and creation of lists and document libraries."
                 ]
             },
             {
@@ -142,7 +128,7 @@ export const contentEn = {
                 start: "2009",
                 end: "2014",
                 startLabel: "2009",
-                endLabel: "2014",
+                endLabel: "2015",
                 bullets: []
             }
         ],
@@ -272,18 +258,25 @@ export const contentEn = {
             frontend_development: "Frontend Development",
             systems_work: "Systems Work",
             automation: "Automation",
-            user_focused_development: "User-focused Development",
+            workpoint: "WorkPoint",
+            power_automate: "Power Automate",
+            sharegate: "ShareGate",
+            data_migration: "Data Migration",
+            troubleshooting: "Troubleshooting",
+            system_configuration: "System Configuration",
+            technical_support: "Technical Support",
+            data_classification: "Data Classification",
             typescript: "TypeScript",
-            system_administration: "System Administration",
-            cloud_services: "Cloud Services",
-            performance_optimization: "Performance Optimization",
-            security_best_practices: "Security Best Practices",
-            code_review: "Code Review",
-            documentation: "Documentation",
-            mentoring: "Mentoring",
-            project_management: "Project Management",
-            agile_methodologies: "Agile Methodologies",
-            devops_practices: "DevOps Practices"
+            data_engineering: "Data Engineering",
+            web_data_collection: "Web Data Collection",
+            data_enrichment: "Data Enrichment",
+            postgresql: "PostgreSQL",
+            workflow_design: "Workflow Design",
+            data_automation: "Data Automation",
+            ai_enrichment: "AI Enrichment",
+            data_modeling: "Data Modeling",
+            computer_vision: "Computer Vision",
+            web_development: "Web Development"
         }
     },
     projectsPage: {
@@ -303,37 +296,72 @@ export const contentEn = {
             active: "In progress"
         },
         items: {
-            tasklist: {
-                title: "TaskList",
-                summary: "A full-stack task management application focused on practical workflows, clear task visibility, and a clean day-to-day user experience.",
+            // tasklist: {
+            //     title: "TaskList",
+            //     summary: "A full-stack task management application focused on practical workflows, clear task visibility, and a clean day-to-day user experience.",
+            //     highlights: [
+            //         "Built a full-stack task workflow with a React frontend and .NET backend.",
+            //         "Focused on clarity and fast interactions for daily task management.",
+            //         "Connected core features through a clean API-driven architecture."
+            //     ],
+            //     imageAlt: "TaskList project preview"
+            // },
+            // portfolio: {
+            //     title: "Portfolio Website",
+            //     summary: "A personal portfolio built to present experience, projects, and technical strengths through a calm, modern interface with bilingual support.",
+            //     highlights: [
+            //         "Designed a unified tab-based portfolio experience with shared layout patterns.",
+            //         "Implemented bilingual content and dark/light theme support.",
+            //         "Emphasized polished design and user experience."
+            //     ],
+            //     imageAlt: "Portfolio website project preview"
+            // },
+            // case_system: {
+            //     title: "Case Management System",
+            //     summary: "A case management system designed to streamline workflows, improve task visibility, and provide a practical solution for day-to-day work.",
+            //     highlights: [
+            //         "Developing a full-stack case management system with a React frontend and .NET backend.",
+            //         "Designed and implemented a REST API for managing cases, users, and comments.",
+            //         "Built a data model and storage solution using SQL database.",
+            //         "Implemented key features such as status management, filtering, and access control.",
+            //         "Focused on clear structure, separation of concerns, and practical usage."
+            //     ],
+            //     imageAlt: "Case Management System project preview"
+            // },
+            vinnsyn: {
+                title: "Vinnsýn",
+                subheading: "31,235 listings · 405 skills · 82 professions · 4,355 employers",
+                summary: "A data-driven project focused on processing, visualizing, and classifying data efficiently, with a React frontend and Python backend.",
                 highlights: [
-                    "Built a full-stack task workflow with a React frontend and .NET backend.",
-                    "Focused on clarity and fast interactions for daily task management.",
-                    "Connected core features through a clean API-driven architecture."
-                ],
-                imageAlt: "TaskList project preview"
+                    "Built an end-to-end data pipeline and interactive exploration of the Icelandic job market, combining current public listings with reconstructed historical data.",
+                    "Collects current public listings and reconstructs historical coverage from web archives, with deduplication, change tracking and evidence-preserving storage.",
+                    "Enriches largely unstructured job data through source categories, bilingual skill extraction, profession classification, advertiser normalization and geographic mapping.",
+                    "Designed the public experience around five linked views of the same market data: job fields, professions, skills, geography and advertisers, with exploration across time."                ],
+                imageAlt: "Vinnsyn project preview"
             },
-            portfolio: {
-                title: "Portfolio Website",
-                summary: "A personal portfolio built to present experience, projects, and technical strengths through a calm, modern interface with bilingual support.",
+            career_radar: {
+                title: "Career Radar",
+                summary: "A project aimed at providing insights into career trends and opportunities.",
                 highlights: [
-                    "Designed a unified tab-based portfolio experience with shared layout patterns.",
-                    "Implemented bilingual content and dark/light theme support.",
-                    "Emphasized polished design and user experience."
+                    "Built a private, local-first job-search system that turns automated job discovery into a structured workflow for reviewing opportunities, prioritizing applications and tracking outcomes.",
+                    "Designed a staged import and review pipeline with URL normalization, duplicate detection and historical reconciliation, allowing repeated imports to refresh listings without overwriting later decisions or application data.",
+                    "Combined rule-based filtering with AI-assisted enrichment to assess relevance, surface skills and gaps, identify concerns and recommend next actions while keeping final decisions with the user.",
+                    "Built application tracking, deadline and follow-up management, skill-coverage analysis and a focused Today view that turns job-market data into concrete next actions."
                 ],
-                imageAlt: "Portfolio website project preview"
+                imageAlt: "Career Radar project preview"
             },
-            case_system: {
-                title: "Case Management System",
-                summary: "A case management system designed to streamline workflows, improve task visibility, and provide a practical solution for day-to-day work.",
+            go_green: {
+                title: "GoGreen",
+                heading: "Real-time analysis of vehicle traffic and emissions",
+                subheading: "Final project in Computer Science · Reykjavik University · 2021",
+                summary: "A project focused on promoting sustainable practices and environmental awareness.",
                 highlights: [
-                    "Developing a full-stack case management system with a React frontend and .NET backend.",
-                    "Designed and implemented a REST API for managing cases, users, and comments.",
-                    "Built a data model and storage solution using SQL database.",
-                    "Implemented key features such as status management, filtering, and access control.",
-                    "Focused on clear structure, separation of concerns, and practical usage."
+                    "End-to-end vehicle analysis system — Built a system that processed a live camera feed, identified Icelandic license plates using an existing YOLOv4 model, enriched detections with vehicle information, and stored the results in PostgreSQL for further analysis.",
+                    "Database & synthetic data tooling — Built the initial database and Python generators for synthetic vehicle data, then redesigned the database around the project's ER model and adapted the tooling to the new schema.",
+                    "Analytics & visualization — Developed traffic and emissions calculations and reporting functionality, then researched and implemented interactive Plotly visualizations for integration into the Django application.",
+                    "Web application & integration — Built substantial parts of the final Django interface, including the analytics overview, vehicle views, authentication UI, navigation and overall styling. The finished dashboard surfaced daily statistics alongside the latest detected vehicle and its captured image."
                 ],
-                imageAlt: "Case Management System project preview"
+                imageAlt: "Go Green project preview"
             }
 
         }

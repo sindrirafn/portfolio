@@ -38,18 +38,25 @@ function ProjectLinkIcon({ id }) {
   );
 }
 
-function Projects() {
+function Projects({ selectedProjectId, onProjectChange }) {
   const { content } = useLanguage();
   const pageContent = content.projectsPage || {};
   const projectTexts = pageContent.items || {};
   const [activeProjectId, setActiveProjectId] = useState(projects[0]?.id || "");
 
+  const displayedProjectId = selectedProjectId || activeProjectId;
+
   const activeProject = useMemo(
-    () => projects.find((project) => project.id === activeProjectId) || projects[0],
-    [activeProjectId]
+    () => projects.find((project) => project.id === displayedProjectId) || projects[0],
+    [displayedProjectId]
   );
 
   if (!activeProject) return null;
+
+  const handleProjectChange = (project) => {
+    setActiveProjectId(project.id);
+    onProjectChange(project);
+  };
 
   const activeText = projectTexts[activeProject.id] || {};
   const statusLabel = pageContent.statuses?.[activeProject.status] || activeProject.status;
@@ -92,7 +99,7 @@ function Projects() {
               role="tab"
               aria-selected={isActive}
               className={`${styles.tabBarItem} ${isActive ? styles.tabBarItemActive : ""}`}
-              onClick={() => setActiveProjectId(project.id)}
+              onClick={() => handleProjectChange(project)}
             >
               <span className={styles.tabBarItemTitle}>{text.title || project.id}</span>
               {project.date && <span className={styles.tabBarItemMeta}>{project.date}</span>}
@@ -141,7 +148,8 @@ function Projects() {
               )}
             </div>
           </header>
-
+          <p className={styles.projectHeading}>{activeText.heading}</p>
+          <p className={styles.projectSubHeading}>{activeText.subheading}</p>
           {summaryPoints.length > 0 ? (
             <ul className={styles.projectSummaryList}>
               {summaryPoints.map((point) => (

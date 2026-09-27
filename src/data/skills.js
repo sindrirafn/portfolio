@@ -1,49 +1,29 @@
 export const skills = {
   core: [
-    "csharp",
     "python",
     "javascript",
     "sql",
     "html",
     "css",
-    "cpp",
-    "r"
-  ],
-  tools: [
-    "react",
-    "dotnet",
-    "django",
-    "node",
-    "flutter",
-    "sharepoint",
-    "powershell",
-    "git",
-    "linux",
-    "bash",
-    "azure",
-    "jira",
+    "r",
     "matlab"
   ],
+  tools: [
+    "sharepoint",
+    "workpoint",
+    "powershell",
+    "power_automate",
+    "git",
+    "sharegate"
+  ],
   concepts: [
-    "backend",
-    "fullstack",
-    "api_development",
-    "database_design",
-    "database_integration",
-    "system_design",
-    // "state_management",
-    "testing",
-    "debugging",
-    "version_control",
-    "frontend_development",
-    "systems_work",
     "automation",
-    "user_focused_development",
+    "technical_support",
     "data_analysis",
     "data_visualization",
-    "statistical_analysis",
-    "simulation",
-    "data_processing"
+    "data_migration",
+    "system_configuration",
+    "troubleshooting"
   ],
   professional: [
     "communication",
@@ -51,11 +31,6 @@ export const skills = {
     "initiative",
     "attention_to_detail",
     "adaptability",
-    "fast_learner",
-    "problem_solving",
-    "engineering_mindset",
-    "collaboration",
-    "critical_thinking",
-    "creativity"
+    "problem_solving"
   ]
 };

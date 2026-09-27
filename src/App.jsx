@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TabBar from "./components/layout/TabBar/TabBar";
 import Navbar from './components/layout/Navbar';
 import About from './components/sections/About';
@@ -10,6 +10,7 @@ import { ThemeProvider } from './components/ThemeContext';
 import CV from './components/sections/CV';
 import ContentPanel from './components/layout/ContentPanel';
 import Footer from './components/layout/Footer';
+import { projects } from './data/projects';
 
 
 const tabs = [
@@ -19,8 +20,41 @@ const tabs = [
   { id: "projects" },
 ];
 
+function getRouteState() {
+  const projectSlug = window.location.pathname.match(/^\/projects\/([^/]+)\/?$/)?.[1];
+  const project = projects.find((item) => item.slug === projectSlug);
+
+  return project
+    ? { activeTab: "projects", projectId: project.id }
+    : { activeTab: "about", projectId: null };
+}
+
 function App() {
-  const [activeTab, setActiveTab] = useState("about");
+  const [routeState, setRouteState] = useState(getRouteState);
+
+  useEffect(() => {
+    const handlePopState = () => setRouteState(getRouteState());
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  const handleTabChange = (tabId) => {
+    setRouteState({ activeTab: tabId, projectId: null });
+
+    if (window.location.pathname !== "/") {
+      window.history.pushState({}, "", "/");
+    }
+  };
+
+  const handleProjectChange = (project) => {
+    setRouteState({ activeTab: "projects", projectId: project.id });
+
+    const projectPath = `/projects/${project.slug}`;
+    if (window.location.pathname !== projectPath) {
+      window.history.pushState({}, "", projectPath);
+    }
+  };
 
   return (
     <ThemeProvider>
@@ -29,20 +63,23 @@ function App() {
         <div className="appShell themeTransition">
           <IntroPanel />
 
-          <TabBar activeTab={activeTab} onTabChange={setActiveTab} tabs={tabs} />
+          <TabBar activeTab={routeState.activeTab} onTabChange={handleTabChange} tabs={tabs} />
 
           <ContentPanel>
-            {activeTab === "about" && (
+            {routeState.activeTab === "about" && (
               <About />
             )}
-            {activeTab === "cv" && (
-              <CV onNavigateToTab={setActiveTab} />
+            {routeState.activeTab === "cv" && (
+              <CV onNavigateToTab={handleTabChange} />
             )}
-            {activeTab === "skills" && (
+            {routeState.activeTab === "skills" && (
               <Skills />
             )}
-            {activeTab === "projects" && (
-              <Projects />
+            {routeState.activeTab === "projects" && (
+              <Projects
+                selectedProjectId={routeState.projectId}
+                onProjectChange={handleProjectChange}
+              />
             )}
           </ContentPanel>
         </div>
